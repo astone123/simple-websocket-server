@@ -44,7 +44,7 @@ const log = info => {
 
 app.post("/webhook", function(req, res) {
   log(req.body);
-  data = JSON.stringify(req.data);
+  data = JSON.stringify(req.body);
   q.push(cb => {
     messages.push(data);
     cb();
